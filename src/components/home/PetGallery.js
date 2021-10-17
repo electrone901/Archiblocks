@@ -1,3 +1,4 @@
+/* eslint-disable semi */
 /* eslint-disable indent */
 
 import React, { useEffect, useState } from 'react'
@@ -16,7 +17,7 @@ function PetGallery() {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    console.log('🚀 PetGallery.js apiKey', apiKey)
+    console.log('🚀 Gallery.js apiKey', apiKey)
     const loadPets = async () => {
       try {
         setLoading(true)
@@ -58,7 +59,7 @@ function PetGallery() {
     loadPets()
   }, [])
 
-  console.log('🚀  petsData', petsData)
+  console.log('🚀  Data', petsData)
 
   return (
     <div style={{ minHeight: '70vh', paddingBottom: '3rem' }}>

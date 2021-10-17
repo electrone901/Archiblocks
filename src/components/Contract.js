@@ -70,17 +70,26 @@ export const Contract = ({ near, update, localKeys = {}, account }) => {
       alert('Please enter a message and amount!')
       return
     }
-    // update('loading', true);
-    // const appAccount = createAccessKeyAccount(near, KeyPair.fromString(localKeys.accessSecret));
-    // const contract = getContract(appAccount);
-    // await contract.create({
-    // 	message,
-    // 	amount: parseNearAmount(amount),
-    // 	owner: localKeys.accountId
-    // }, GAS);
-    // await loadMessage();
-    // update('loading', false);
-		console.log("🚀 ~ file: Contract.js ~ line 86 ~ handleCreateMessage ~ apiKey", apiKey)
+    update('loading', true)
+    const appAccount = createAccessKeyAccount(
+      near,
+      KeyPair.fromString(localKeys.accessSecret),
+    )
+    const contract = getContract(appAccount)
+    await contract.create(
+      {
+        message,
+        amount: parseNearAmount(amount),
+        owner: localKeys.accountId,
+      },
+      GAS,
+    )
+    await loadMessage()
+    update('loading', false)
+    console.log(
+      '🚀 ~ file: Contract.js ~ line 86 ~ handleCreateMessage ~ apiKey',
+      apiKey,
+    )
     console.log('🚀', message, amount, image)
     // Save to IPFS
     const client = new NFTStorage({ token: apiKey })
@@ -92,7 +101,7 @@ export const Contract = ({ near, update, localKeys = {}, account }) => {
 
     if (metadata) {
       console.log(
-        '🚀 ~ file: Contract.js ~ line 93 ~ handleCreateMessage ~ metadata',
+        '🚀 ~ IPFS metadata',
         metadata,
       )
     }
@@ -195,10 +204,8 @@ export const Contract = ({ near, update, localKeys = {}, account }) => {
         </>
       )}
 
-{/* Gallery  */}
-<Home/>
-
-
+      {/* Gallery  */}
+      <Home />
 
       {account && (
         <>

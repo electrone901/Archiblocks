@@ -23,7 +23,6 @@ const validBlock = async (blockNumber) => {
 const verifySignature = async (accountId, data, signature, contractName = '') => {
 
 	const nearAccount = await near.account(accountId);
-	console.log("🚀 ~ file: near.js ~ line 26 ~ verifySignature ~ nearAccount", nearAccount);
 	try {
 		const hash = crypto.createHash('sha256').update(data).digest();
 		let accessKeys = await nearAccount.getAccessKeys();

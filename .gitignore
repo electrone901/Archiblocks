@@ -9,6 +9,7 @@ package-lock.json
 
 #keys
 /neardev
+src/components/APIKEYS.js
 
 #cache
 .cache

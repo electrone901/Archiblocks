@@ -1,17 +1,24 @@
 # Archiblocks
 Welcome to Archiblocks, where NFTs meet a virtual world.
-NFTs are a revolution in the digital creative space and it's only going to be bigger.  Regular people , artis and creators need to make this space and we making it accessible to anyone and everyone. An NFT Platform for creators to create, mint, and sell their skills. It's a creative space for everyone. We call it a planet of our own.
+NFTs are a revolution in the digital creative space and it's only going to get bigger.  Artist, creators, and makers are trying to get into it but many of the are not techavvy that's why we are creating Archiblock. Archiblocks is an NFT marketplace for anyone and everyone.
+Archiblocks platform where creators can sell their works, users can buy and earn them as well as experice them throuh a virtual world.
+
+  and experice them
+
+  . It's a creative space for everyone. We call it a planet of our own.
 
 Blockchain allows for certain. It also allows for infinite customization.
 
-# How it's made
+# Tech Stack:
 Archiblocks application makes use of the following softwares:
 
-* Near Network
+* Near Network: we used Near Network for the local test development and blockchain tehnology
 
-* Rust
+* Rust: we use Rust for our smart contract
 
-* IPFS NFT.Storage
+* IPFS NFT.Storage: We use IPFS to store NFTS's metadata and to retrive data.
+
+* React Js, Material-ui, Web3 React Js for the frontend, Material-ui and Web3 to connect to blockchain.
 
 
 ## Technical Skills used in this project
